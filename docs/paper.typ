@@ -6,6 +6,7 @@
 common to perform en-mass transformations using homogeneous 4x4
 transformation matrices.
  - Sparse matrix
+== Implement Strassen algorithm
 == Benchmark
  - Against Numpy
 // vi: set nowrap:

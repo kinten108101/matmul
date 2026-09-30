@@ -1,31 +1,31 @@
-#include <strassen.h>
+#include "../../headers/strassen/strassen.h"
 
-const int DEFAULT_OMP_NUM_THREADS = 10;
-
-nextPowerOfTwo(int n)
+int nextPowerOfTwo(int n)
 {
     return pow(2, ceil(log2(n)));
 }
 
+// float **resizeMatrix(float **matIn, float **matOut, int newR, int newC)
+// {
+// }
+
 int main(int argc, char **argv)
 {
-    //     if (argc >= 2)
-    //     {
-    //         omp_set_num_threads(atoi(argv[1]));
-    //     }
-    //     else
-    //     {
-    //         omp_set_num_threads(DEFAULT_OMP_NUM_THREADS);
-    //     }
-
     // #pragma omp parallel
     //     {
-    //         printf("Hello World... from thread = %d\n",
-    //                omp_get_thread_num());
+    //         printf("Hello World! Thread no. %d\n", omp_get_thread_num());
     //     }
 
-    printf("Test nextPowerOfTwo: ", nextPowerOfTwo(10));
-    printf("Test nextPowerOfTwo: ", nextPowerOfTwo(10));
+    //     printf("Test nextPowerOfTwo: %d\n", nextPowerOfTwo(10));
+    //     printf("Test nextPowerOfTwo: %d\n", nextPowerOfTwo(-1));
+
+    omp_set_num_threads(4);
+
+#pragma omp parallel for
+    for (int i = 0; i < 16; i++)
+    {
+        printf("Thread number %d, i = %d\n", omp_get_thread_num(), i);
+    }
 
     return 0;
 }
