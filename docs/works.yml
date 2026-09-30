@@ -1,0 +1,7 @@
+shonan:
+  type: Proceedings
+  title: "Shonan challenge for generative programming: short position paper"
+  author: ["Aktemur, Baris", "Kameyama, Yukiyoshi", "Kiselyov, Oleg", "Shan, Chung-chieh"]
+  year: 2013
+  url: "https://doi.org/10.1145/2426890.2426917"
+  series: "PEPM '13"
