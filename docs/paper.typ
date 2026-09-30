@@ -1,2 +1,6 @@
- - Homogeneous matrices. For example, in computer graphics, it is common to perform en-mass transformations using homogeneous 4x4 transformation matrices.
+== Cases
+ - Homogeneous matrices. For example, in computer graphics, it is
+common to perform en-mass transformations using homogeneous 4x4
+transformation matrices.
  - Sparse matrix
+// vi: set nowrap:
