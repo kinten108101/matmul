@@ -1,9 +1,12 @@
+#ifndef STRASSEN_H
+#define STRASSEN_H
+
 #include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int main(int argc, char **argv);
+float **resizeMatrix(float **matIn, float **matOut, int newR, int newC);
 
 /// @brief Multiply 2 matrices and passes to matRet
 /// @param matA The left matrix to multiply
@@ -17,3 +20,5 @@ int multiplyMatrix(float **matA, float **matB, float **matRet);
 /// @param n Target number
 /// @return Next power of two
 int nextPowerOfTwo(int n);
+
+#endif
